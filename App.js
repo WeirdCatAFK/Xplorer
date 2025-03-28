@@ -1,18 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Home from './components/Home.jsx';
+import React from "react";
+import { SafeAreaView, View, Text, StyleSheet } from "react-native";
+import MissionList from "./components/Misiones/MissionList";
+import Header from "./components/Header";
 
-export default function App() {
+const App = () => {
   return (
-    <Home></Home>
+    <SafeAreaView style={styles.container}>
+      <Header />
+      <MissionList />
+    </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#FFEB3B",
   },
 });
+
+export default App;
