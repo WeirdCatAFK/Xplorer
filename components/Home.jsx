@@ -1,11 +1,8 @@
 import {View, Text} from 'react-native';
-
+import ReadNFC from './ReadNFC.jsx';
 const Home = () => {
     return(
         <View>
-            <Text>
-                Holiwis desde el componente de casita
-            </Text>
         </View>
     )
 }
