@@ -1,11 +1,12 @@
 import {View, Text} from 'react-native';
-
+import Busqueda from './busqueda.jsx';
 const Home = () => {
     return(
         <View>
             <Text>
-                Holiwis desde el componente de casita
+             Hola pola
             </Text>
+            <Busqueda />
         </View>
     )
 }
