@@ -2,12 +2,14 @@ import React from "react";
 import { SafeAreaView, View, Text, StyleSheet } from "react-native";
 import MissionList from "./components/Misiones/MissionList";
 import Header from "./components/Header";
+import MissionScreen from "./components/Misiones/MissionScreen";
 
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Header />
-      <MissionList />
+      {/* <MissionList /> */}
+      <MissionScreen />
     </SafeAreaView>
   );
 };

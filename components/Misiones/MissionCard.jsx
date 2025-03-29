@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     color: "#FF9D23",
-    fontFamily: "LilitaOne-Regular",
+    fontFamily: "LilitaOne-Regular"
   },
   description: {
     fontSize: 12,
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     borderRadius: 5,
     width: 120,
-    alignItems: "center",
+    alignItems: "center"
   },
   buttonText: {
     color: "black",
