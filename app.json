@@ -35,7 +35,8 @@
     "extra": {
       "eas": {
         "projectId": "38414e8b-3dcb-4153-abba-990c5bcb42b5"
-      }
+      },
+      "GEMINI_API_KEY": "AIzaSyDywUcAFR5zCgrdw7k4ZuZDTwG6rFTvNhc"
     }
   }
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity, ActivityIndicator } from "react-native";
 import * as Font from "expo-font";
 
-const Inicio = ({ title, subtitle, buttonText}) => {
+const Bienvenida = ({ title, subtitle, buttonText}) => {
   const [fontsLoaded, setFontsLoaded] = useState(false);
     useEffect(() => {
       async function loadFonts() {
@@ -97,4 +97,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Inicio;
+export default Bienvenida;

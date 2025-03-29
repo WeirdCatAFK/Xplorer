@@ -1,14 +1,21 @@
 import { View, Text, StyleSheet } from "react-native";
-//import ReadNFC from "./ReadNFC.jsx";
-//import Gemini from './Gemini.jsx';
-//import Header from './Header.jsx';
-//import Inicio from './Inicio.jsx';
-//import MissionCard from "./Misiones/MissionCard.jsx";
-//import MissionList from './Misiones/MissionList.jsx';
-//import MissionScreen from './Misiones/MissionScreen.jsx';
+//Dani
+import ReadNFC from "./ReadNFC.jsx";
+// Cesar
+import Gemini from './Gemini.jsx';
+// Meli
+import Header from './Header.jsx';
+import Bienvenida from './Bienvenida.jsx';
+import MissionCard from "./Misiones/MissionCard.jsx";
+import MissionList from './Misiones/MissionList.jsx';
+import MissionScreen from './Misiones/MissionScreen.jsx';
+//Ivie
+import BusquedaScreen from './Busqueda/BusquedaScreen.jsx';
+import PerfilScreen from './Perfil/PerfilScreen.jsx';
+import Logros from './Logros/LogrosScreen.jsx';
 const Index = () => {
   return (
-    <MissionScreen></MissionScreen>
+    <ReadNFC></ReadNFC>
   );
 };
 
