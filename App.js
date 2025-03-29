@@ -3,13 +3,15 @@ import { SafeAreaView, View, Text, StyleSheet } from "react-native";
 import MissionList from "./components/Misiones/MissionList";
 import Header from "./components/Header";
 import MissionScreen from "./components/Misiones/MissionScreen";
+import Inicio from "./components/Inicio";
 
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Header />
+     
       {/* <MissionList /> */}
-      <MissionScreen />
+      {/* <MissionScreen /> */}
+      <Inicio />
     </SafeAreaView>
   );
 };
@@ -17,7 +19,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFEB3B",
+    backgroundColor: "#FFE856",
   },
 });
 

@@ -7,7 +7,7 @@ const Home = () => {
             <Text>
                 Holiwis desde el componente de casita
             </Text>
-            <MisionesList />
+            
         </View>
     )
 }

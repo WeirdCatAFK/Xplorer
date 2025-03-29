@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Platform, View, Text, Image, StyleSheet, ActivityIndicator } from "react-native";
+import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import * as Font from "expo-font";
 
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#hhhh",
+    backgroundColor: "#FFD65A",
     padding: 30,
     justifyContent: "flex-start",
     shadowColor: "black",
@@ -47,8 +47,6 @@ const styles = StyleSheet.create({
     borderRadius: 10
   },
   
-  
-
   headerText: {
     fontSize: 30,
     fontWeight: "bold",

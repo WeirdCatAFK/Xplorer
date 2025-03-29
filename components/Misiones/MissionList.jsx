@@ -1,6 +1,7 @@
 import React from "react";
 import { View, ScrollView, StyleSheet } from "react-native";
 import MissionCard from "./MissionCard";
+import Header from "../../components/Header";
 
 const missions = [
   {
@@ -22,10 +23,13 @@ const missions = [
 
 const MissionList = () => {
   return (
-    <ScrollView style={styles.container}>
-      {missions.map((mission, index) => (
-        <MissionCard key={index} {...mission} />
-      ))}
+    <ScrollView>
+      <Header />
+      <ScrollView style={styles.container}>
+        {missions.map((mission, index) => (
+          <MissionCard key={index} {...mission} />
+        ))}
+      </ScrollView>
     </ScrollView>
   );
 };

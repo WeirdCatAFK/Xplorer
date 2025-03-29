@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet, ActivityIndicator, Image } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import * as Font from "expo-font";
+import Header from "../../components/Header";
+
 
 const activities = [
   { id: 1, title: 'Descubre la historia de la peña' },
@@ -43,34 +45,39 @@ const MissionScreen = () => {
   };
 
   return (
-    <ScrollView style={styles.container}>
-      <Text style={styles.title}>Misión: Hablando con los dioses</Text>
-      <Text style={styles.titlee}>Ubicación de la misión</Text>
-      
-      <Image 
-        source={{ uri: "https://media-public.canva.com/hHbnI/MAEtbehHbnI/1/tl.jpg" }} 
-        style={styles.mapImage} 
-        resizeMode="cover"
-      />
+    
+    <ScrollView>
+      <Header/>
+      <ScrollView style={styles.container}>
+        <Text style={styles.title}>Misión: Hablando con los dioses</Text>
+        <Text style={styles.titlee}>Ubicación de la misión</Text>
+        
+        <Image 
+          source={{ uri: "https://media-public.canva.com/hHbnI/MAEtbehHbnI/1/tl.jpg" }} 
+          style={styles.mapImage} 
+          resizeMode="cover"
+        />
 
-      <Text style={styles.sectionTitle}>Detalles de la misión</Text>
-      <Text style={styles.description}>La Peña de Bernal es un monolito de origen volcánico ubicado en el estado de Querétaro, México. Con aproximadamente 433 metros de altura sobre el nivel del pueblo de Bernal, es considerado uno de los monolitos más grandes del mundo.</Text>
-      <Text style={styles.sectionTitle}>Actividades</Text>
-      {activities.map((activity) => (
-        <View key={activity.id} style={styles.activityContainer}>
-          <TouchableOpacity onPress={() => toggleActivity(activity.id)}>
-            <MaterialIcons
-              name={!!completed[activity.id] ? 'check-circle' : 'radio-button-unchecked'}
-              size={24}
-              color={!!completed[activity.id] ? 'orange' : 'gray'}
-            />
-          </TouchableOpacity>
-          <Text style={styles.activityText}>{activity.title}</Text>
-        </View>
-      ))}
-      <TouchableOpacity style={styles.backButton}>
-        <Text style={styles.backButtonText}>Regresar</Text>
-      </TouchableOpacity>
+        <Text style={styles.sectionTitle}>Detalles de la misión</Text>
+        <Text style={styles.description}>La Peña de Bernal es un monolito de origen volcánico ubicado en el estado de Querétaro, México. Con aproximadamente 433 metros de altura sobre el nivel del pueblo de Bernal, es considerado uno de los monolitos más grandes del mundo.</Text>
+        <Text style={styles.sectionTitle}>Actividades</Text>
+        {activities.map((activity) => (
+          <View key={activity.id} style={styles.activityContainer}>
+            <TouchableOpacity onPress={() => toggleActivity(activity.id)}>
+              <MaterialIcons
+                name={!!completed[activity.id] ? 'check-circle' : 'radio-button-unchecked'}
+                size={24}
+                color={!!completed[activity.id] ? 'orange' : 'gray'}
+              />
+            </TouchableOpacity>
+            <Text style={styles.activityText}>{activity.title}</Text>
+          </View>
+        ))}
+        <TouchableOpacity style={styles.backButton}>
+          <Text style={styles.backButtonText}>Regresar</Text>
+        </TouchableOpacity>
+        
+      </ScrollView>
     </ScrollView>
   );
 };
@@ -91,7 +98,8 @@ const styles = StyleSheet.create({
     fontSize: 18, 
     fontWeight: 'bold', 
     color: '#F93827', 
-    fontFamily: "Delius-Regular" 
+    fontFamily: "Delius-Regular", 
+    marginTop: 5,
   },
 
   titlee: { 
