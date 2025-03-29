@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Home from './components/Home.jsx';
+import Index from './components/Index.jsx';
 
 export default function App() {
   return (
-    <Home></Home>
+    <Index></Index>
   );
 }
 
