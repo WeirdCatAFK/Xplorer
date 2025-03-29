@@ -23,6 +23,13 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "GEMINI_API_KEY": "AIzaSyDywUcAFR5zCgrdw7k4ZuZDTwG6rFTvNhc"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": ["js", "json", "ts", "tsx"]
     }
   }
 }
