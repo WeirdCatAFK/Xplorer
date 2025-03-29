@@ -1,0 +1,67 @@
+#include <SPI.h>
+#include <MFRC522.h>
+
+#define SS_PIN 5   // Pin para SS (Slave Select)
+#define RST_PIN 22 // Pin para RST (Reset)
+
+MFRC522 mfrc522(SS_PIN, RST_PIN);
+MFRC522::MIFARE_Key key;
+
+void setup() 
+{
+    Serial.begin(115200); 
+    while (!Serial);     
+
+    SPI.begin();         
+    mfrc522.PCD_Init();  
+
+    for (byte i = 0; i < 6; i++) 
+    {
+        key.keyByte[i] = 0xFF;
+    }
+
+    Serial.println("Lector RFID listo. Acerca una tarjeta...");
+}
+
+void loop() 
+{
+    if (!mfrc522.PICC_IsNewCardPresent() || !mfrc522.PICC_ReadCardSerial()) 
+    {
+        return;
+    }
+
+    Serial.print("UID de la tarjeta: ");
+    for (byte i = 0; i < mfrc522.uid.size; i++) 
+    {
+        Serial.print(mfrc522.uid.uidByte[i], HEX);
+        Serial.print(" ");
+    }
+    Serial.println();
+
+    byte dataBlock[] = { 'G', 'A', 'T', 'O', '_', 'R', 'A', 'R', 'O', '_', 'A', 'F', 'K', 0, 0, 1 };
+
+    MFRC522::StatusCode status;
+    status = mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_A, 4, &key, &(mfrc522.uid));
+    if (status != MFRC522::STATUS_OK) 
+    {
+        Serial.print("Error de autenticación: ");
+        Serial.println(mfrc522.GetStatusCodeName(status));
+        mfrc522.PICC_HaltA();
+        return;
+    }
+
+    // Escribir datos en el bloque 4
+    status = mfrc522.MIFARE_Write(4, dataBlock, 16);
+    if (status == MFRC522::STATUS_OK) 
+    {
+        Serial.println("¡Datos escritos correctamente!");
+    } 
+    else 
+    {
+        Serial.print("Error al escribir: ");
+        Serial.println(mfrc522.GetStatusCodeName(status));
+    }
+
+    mfrc522.PICC_HaltA();
+    mfrc522.PCD_StopCrypto1();
+}
