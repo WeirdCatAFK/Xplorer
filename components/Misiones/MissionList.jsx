@@ -4,19 +4,19 @@ import MissionCard from "./MissionCard";
 
 const missions = [
   {
-    title: "Sube a la peña",
+    title: "Alcanzando a los dioses",
     description: "Explora la increíble peña y disfruta de la vista.",
-    image: "https://via.placeholder.com/80", 
+    image: "https://media-public.canva.com/hHbnI/MAEtbehHbnI/1/tl.jpg", 
   },
   {
     title: "Cruza los arcos",
     description: "Camina sobre los antiguos arcos y disfruta del paisaje.",
-    image: "https://via.placeholder.com/80",
+    image: "https://media-public.canva.com/bsbU8/MAF757bsbU8/1/tl.jpg",
   },
   {
     title: "Disfruta un vino",
     description: "Descubre los mejores vinos de la región.",
-    image: "https://via.placeholder.com/80",
+    image: "https://media-public.canva.com/WwOoM/MAGL14WwOoM/1/tl.jpg",
   },
 ];
 
