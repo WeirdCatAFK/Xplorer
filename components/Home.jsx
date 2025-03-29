@@ -1,10 +1,10 @@
 import { View, Text, StyleSheet } from "react-native";
-import ReaderNFC from "./ReaderNFC.jsx";
+import ReadNFC from "./ReadNFC.jsx";
 
 const Home = () => {
   return (
     <View style={styles.container}>
-      <ReaderNFC />
+      <ReadNFC />
     </View>
   );
 };
